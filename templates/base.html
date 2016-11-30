@@ -31,9 +31,24 @@
   </head>
   <body>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    //TODO:
-  </nav>
     <div>
+        <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span>Toggle navigation</span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <span><a href="/">ThantsStore</a> </span>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            {% for xstore in nav_display_xstores %}
+            {% endfor %}
+        </ul>
+    </div>
+  </nav>
+
+    <div class="row clearfix">
         <div>
             {% block content %}
             <h1>自强 新闻网</h1>
