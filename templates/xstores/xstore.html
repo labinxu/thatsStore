@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ xstore.name }}
+{% endblock title %}
+
+{% block content %}
+<p>商店名称：{{ xstore.name }} </p>
+商店介绍：{{ xstore.intro }}
+商品列表：
+<ul>
+    {% for goods in xstore.xgoods_set.all %}
+    <li>
+        <a href="{{ goods.getAbsoluteUrl }}">{{ goods.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}
