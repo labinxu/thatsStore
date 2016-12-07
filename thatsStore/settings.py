@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     #'reversion',
     'xstores',
     'DjangoUeditor',
-
 ]
 TEMPLATE_CONTEXT_PROCESSORS = [
         'django.contrib.auth.context_processors.auth',
@@ -150,11 +149,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # 公共的 static 文件，比如 jquery.js 可以放这里，这里面的文件夹不能包含 STATIC_ROOT
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "common_static"),
+    os.path.join(BASE_DIR, "common_static/"),
 )
 
 # upload folder

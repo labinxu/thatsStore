@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Include bootstrap css -->
+        <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+
+
+
+        <title>{% block title %}欢迎光临 {% endblock title %} - </title>
+    </head>
+    <body>
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'jquery/jquery.min.js' %}"></script>
+
+        <!-- content -->
+        {% block content %} {% endblock content %}
+
+    </body>
+</html>

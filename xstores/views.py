@@ -5,8 +5,11 @@ from .models import XStore
 from .xgoods.xgoods import XGoods
 from django.shortcuts import redirect
 
-
 def index(request):
+
+    return render(request, 'home.html')
+
+def index_(request):
     home_display_xstores = XStore.objects.filter(home_display=True)
     nav_display_xstores = XStore.objects.filter(nav_display=True)
 
